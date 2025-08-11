@@ -1,0 +1,111 @@
+nav {
+  width: auto;
+  height: auto;
+  background-color: var(--cor-azul-escuro1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 13.5rem 1.8rem 17.1rem;
+}
+.logo img {
+  width: 33px;
+  height: 34px;
+}
+.menu-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+}
+/* Menu lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30.6rem;
+  height: 100vh;
+  background-color: var(--cor-azul-escuro1);
+  padding: 2rem 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-logo {
+  width: 47px;
+  height: 50px;
+}
+.sidebar-close {
+  display: flex;
+  justify-content: flex-end;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+.sidebar .close-btn {
+  align-self: flex-end;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10rem;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.sidebar-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar ul li a:hover {
+  color: var(--cor-azul-claro);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* preto translúcido */
+  z-index: 900; /* abaixo da sidebar que tem z-index: 1000 */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,86 @@
+.title-sobre {
+  font-size: 26px;
+  color: var(--cor-branco-puro);
+  margin-bottom: 2rem;
+  text-align: start;
+  position: relative;
+  padding-left: 2rem;
+}
+.title-sobre::before {
+  content: "";
+  display: block;
+  background-image: url("../../assets/imgs/detalhe-sobre.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  left: -0.5rem;
+  position: absolute;
+}
+.select {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.navegacao {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  border-radius: 5px;
+  background-color: var(--cor-azul-claro3);
+  width: 42rem;
+  height: 3.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 0.5rem;
+  justify-content: center;
+}
+.active {
+  background-color: var(--cor-azul-escuro1);
+  padding: 0.1rem 2.8rem;
+  border-radius: 5px;
+}
+.navegacao ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0;
+}
+.navegacao ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navegacao ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.descricao-text {
+  width: 56rem;
+  text-align: center;
+  font-size: 22px;
+}
+.descricao-text h2 {
+  font-size: 24px;
+}
+.informacao {
+}
+.informacao-text-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 1rem;
+  justify-content: space-between;
+}
+.informacao-text {
+  display: flex;
+  align-items: center;
+}

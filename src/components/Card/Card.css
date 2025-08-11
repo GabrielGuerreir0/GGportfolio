@@ -1,0 +1,48 @@
+.card {
+  width: 18.75rem;
+  height: 18.75rem;
+  background-color: var(--cor-azul-claro3);
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -60px; /* Para o ícone ficar parcialmente fora do card */
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--cor-azul-escuro1);
+  border-radius: 50%;
+  padding: 15px;
+  border: 5px solid var(--cor-azul-claro3); /* Borda do círculo */
+}
+
+.content-container {
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.author {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: normal;
+}

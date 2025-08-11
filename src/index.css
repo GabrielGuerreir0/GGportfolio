@@ -1,0 +1,31 @@
+:root {
+  font-family: Konkhmer Sleokchher, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  ---cor-txto: #fff;
+  --cor-branco-puro: #fff;
+  --cor-azul-claro: #32abe7;
+  --cor-azul-claro2: #19559a;
+  --cor-azul-claro3: #1d36c3;
+  --cor-azul-escuro1: #00004e;
+  --cor-azul-escuro2: #210df5;
+  --cor-azul-escuro3: #1909cb;
+  --cor-fundo-terciario: #444;
+  --cor-fundo-quaternario: #555;
+  --cor-fundo-quintario: #666;
+}
+
+body {
+  margin: 0;
+}
