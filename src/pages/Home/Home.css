@@ -133,6 +133,9 @@
   font-size: 28px;
   margin-bottom: 40rem;
 }
+.texto {
+  font-size: 1.75rem;
+}
 .home-content-sobre {
   display: flex;
   align-items: center;
@@ -193,6 +196,34 @@
 .home-content-projetos {
   background-color: var(--cor-azul-escuro1);
   display: flex;
+  padding-bottom: 21.25rem;
+}
+
+.home-content-contact {
+  background-color: var(--cor-azul-claro4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 26.6rem;
+}
+.home-content-contact h2 {
+  width: 34.3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.home-content-contact button {
+  background-color: var(--cor-azul-claro);
+  color: var(--cor-txto);
+  padding: 10px 20px;
+  border-radius: 64px;
+  text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  box-shadow: -5px 10px 4px rgba(0, 0, 0, 0.35);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
 }
 
 @keyframes scale-in {

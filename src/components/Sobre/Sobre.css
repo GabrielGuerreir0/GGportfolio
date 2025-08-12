@@ -84,3 +84,14 @@
   display: flex;
   align-items: center;
 }
+.minha-apresentacao {
+  font-size: 1.37rem;
+  color: #d5d5ff;
+  margin-bottom: 3rem;
+}
+.informacao-text {
+  margin-bottom: 3rem;
+}
+.informacao-text img {
+  margin-right: 0.5rem;
+}

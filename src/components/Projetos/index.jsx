@@ -2,6 +2,8 @@ import React from "react";
 import "./Projetos.css";
 import CardProjeto from "../CardProjeto";
 import dataverse from "../../assets/imgs/dataverse.png";
+import clinicflow from "../../assets/imgs/ClinicFlow.png";
+import techparatodos from "../../assets/imgs/TechParaTodos.png";
 import lapis from "../../assets/imgs/lapis.png";
 import bandeira from "../../assets/imgs/bandeira.png";
 import calendario from "../../assets/imgs/calendario.png";
@@ -43,9 +45,9 @@ const Projetos = () => {
       </div>
 
       <div className="projetos-apresentation">
-        <CardProjeto name="Projeto 1" image={dataverse} />
-        <CardProjeto name="Projeto 2" image={dataverse} />
-        <CardProjeto name="Projeto 3" image={dataverse} />
+        <CardProjeto name="DataVerse" image={dataverse} />
+        <CardProjeto name="ClinicFlow" image={clinicflow} />
+        <CardProjeto name="TechParaTodos" image={techparatodos} />
       </div>
     </div>
   );

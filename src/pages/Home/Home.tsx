@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import Sobre from "../../components/Sobre";
 import Card from "../../components/Card";
 import Projetos from "../../components/Projetos";
+import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 import "./Home.css";
 import avatar from "../../assets/imgs/avatar.png";
@@ -84,7 +85,7 @@ const Home = () => {
           </div>
           <div className="home-content-avatar">
             <motion.img
-              className="avatar-img" // Adicionamos uma nova classe para estilizar
+              className="avatar-img"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, delay: 0.8 }}
@@ -102,6 +103,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              className="texto"
             >
               Sou apaixonado por tecnologia, design e boas experiências
               digitais. Aqui você vai encontrar um pouco do que venho criando e
@@ -144,6 +146,15 @@ const Home = () => {
 
         <div className="home-content-projetos">
           <Projetos />
+        </div>
+        <div className="home-content-contact">
+          <h2>
+            Toda grande ideia merece ganhar vida. Vamos realizá-la juntos.
+          </h2>
+          <button>Entre em contato</button>
+        </div>
+        <div className="home-content-footer">
+          <Footer />
         </div>
       </main>
     </>

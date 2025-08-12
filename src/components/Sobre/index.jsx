@@ -34,7 +34,7 @@ const Sobre = () => {
           </div>
 
           <div className="descricao-text">
-            <p>
+            <p className="minha-apresentacao">
               Codando interfaces e manipulando dados, busco trazer novas
               experiências e facilitar a vida dos usuários, sempre contribuindo
               com a acessibilidade.

@@ -9,8 +9,8 @@ const CardProjeto = ({ name, image }) => {
         <img src={image} alt={name} />
       </div>
       <div className="title-card">
-        <img src={check} alt="check" />
-        <h2>{name}</h2>
+        <img className="check" src={check} alt="check" />
+        <h2 className="nome-projeto">{name}</h2>
       </div>
     </div>
   );
