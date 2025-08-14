@@ -1,18 +1,14 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
-
-const RoutesApp = () => {
+import Contato from "../pages/Contato";
+/* import NotFound from "../pages/NotFound";
+ */
+export default function Rotas() {
   return (
     <Routes>
-      {
-        <Route path="/" element={<Home />} />
-        /*
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<NotFound />} /> */
-      }
+      <Route path="/" element={<Home />} />
+      <Route path="/contato" element={<Contato />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   );
-};
-
-export default RoutesApp;
+}

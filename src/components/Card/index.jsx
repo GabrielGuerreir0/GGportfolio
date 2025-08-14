@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import "./Card.css";
 const Card = ({ url, text, title, author }) => {
-  /* const [imageError, setImageError] = React.useState(false);
-
-  const handleImageError = () => {
-    setImageError(true);
-  }; */
-
   return (
     <div class="card">
       <div class="icon-container">

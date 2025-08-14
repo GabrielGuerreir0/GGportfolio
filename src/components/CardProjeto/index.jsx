@@ -2,9 +2,15 @@ import React from "react";
 import "./CardProjeto.css";
 import check from "../../assets/imgs/check.png";
 
-const CardProjeto = ({ name, image }) => {
+const CardProjeto = ({ name, image, onCardClick }) => {
+  const handleClick = () => {
+    if (onCardClick) {
+      onCardClick(name);
+    }
+  };
+
   return (
-    <div className="card-projeto">
+    <div className="card-projeto" onClick={handleClick}>
       <div className="card-projeto-img">
         <img src={image} alt={name} />
       </div>
