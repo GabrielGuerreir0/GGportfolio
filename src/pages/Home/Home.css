@@ -107,7 +107,6 @@
   height: 65%;
   object-fit: cover;
   border-radius: 50%;
-  position: relative;
 }
 
 .dwon-indicator {
@@ -197,6 +196,8 @@
   background-color: var(--cor-azul-escuro1);
   display: flex;
   padding-bottom: 21.25rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-content-contact {

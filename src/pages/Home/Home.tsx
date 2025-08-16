@@ -32,17 +32,17 @@ const Home = () => {
           >
             <ul>
               <li>
-                <a href="">
+                <a href="https://github.com/GabrielGuerreir0">
                   <img src={githubIcon} alt="icone de github" />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://www.instagram.com/guerreir_gabriel/">
                   <img src={instagramIcon} alt="icone de instagram" />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://www.linkedin.com/in/gabriel-guerreir0">
                   <img src={linkedinIcon} alt="icone de linkedin" />
                 </a>
               </li>
@@ -144,7 +144,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="home-content-projetos">
+        <div className="home-content-projetos" id="projetos">
           <Projetos />
         </div>
         <div className="home-content-contact">

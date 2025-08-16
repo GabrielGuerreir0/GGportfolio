@@ -8,17 +8,17 @@ const Footer = () => {
     <div className="content-footer">
       <ul>
         <li>
-          <a href="">
+          <a href="https://github.com/GabrielGuerreir0">
             <img className="icones" src={githubIcon} alt="github" />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.instagram.com/guerreir_gabriel/">
             <img className="icones" src={instagramIcon} alt="instagram" />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.linkedin.com/in/gabriel-guerreir0">
             <img className="icones" src={linkedinIcon} alt="linkedin" />
           </a>
         </li>

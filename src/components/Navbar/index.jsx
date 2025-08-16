@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-/* import { X, Menu } from "include-react"; */
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/imgs/logo.png";
 import hamburguericon from "../../assets/imgs/hamburguer.png";
@@ -47,20 +46,20 @@ const Navbar = () => {
             <a href="/">HOME</a>
           </li>
           <li>
-            <a href="/projetos">PROJETOS</a>
+            <a href="/#projetos">PROJETOS</a>
           </li>
           <li>
             <a href="/contato">CONTATO</a>
           </li>
         </ul>
         <div className="sidebar-social">
-          <a href="#">
+          <a href="https://github.com/GabrielGuerreir0">
             <i className="fab fa-github" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/guerreir_gabriel/">
             <i className="fab fa-instagram" />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/gabriel-guerreir0">
             <i className="fab fa-linkedin" />
           </a>
         </div>

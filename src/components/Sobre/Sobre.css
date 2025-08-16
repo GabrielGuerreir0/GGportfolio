@@ -95,3 +95,74 @@
 .informacao-text img {
   margin-right: 0.5rem;
 }
+
+.descricao-text-skill {
+  padding-left: 6rem;
+  font-size: 1.5rem;
+}
+.descricao-text-skill h3 {
+  font-size: 1.5rem;
+}
+.informacao-skills ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6rem;
+  list-style: inside;
+  font-size: 1.2rem;
+}
+.lista-ferramentas-skills {
+  padding-top: 2rem;
+  padding-left: 6rem;
+}
+.lista-ferramentas-skills ul li img {
+  width: 3rem;
+  height: auto;
+}
+
+.qualificacoes {
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.titulo-secao {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 2px solid var(--cor-branco-puro);
+}
+
+.item h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.item p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin: 3px 0;
+}
+
+.periodo {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
