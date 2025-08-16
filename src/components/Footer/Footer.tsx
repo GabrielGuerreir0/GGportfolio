@@ -1,9 +1,10 @@
+import React from "react";
 import "./Footer.css";
 import githubIcon from "../../assets/imgs/github.png";
 import instagramIcon from "../../assets/imgs/instagram.png";
 import linkedinIcon from "../../assets/imgs/linkedin.png";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="content-footer">
       <ul>

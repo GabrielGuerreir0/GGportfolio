@@ -1,8 +1,8 @@
-import Navbar from "../../components/Navbar";
-import Sobre from "../../components/Sobre";
-import Card from "../../components/Card";
-import Projetos from "../../components/Projetos";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+import Sobre from "../../components/Sobre/Sobre";
+import Card from "../../components/Card/Card";
+import Projetos from "../../components/Projetos/Projetos";
+import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
 import "./Home.css";
 import avatar from "../../assets/imgs/avatar.png";

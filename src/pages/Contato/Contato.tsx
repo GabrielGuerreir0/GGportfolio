@@ -1,21 +1,33 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./Contato.css";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import seta from "../../assets/imgs/seta-direita.png";
 import avatar from "../../assets/imgs/avatar.png";
 
-const Contato = () => {
-  const [form, setForm] = useState({ nome: "", email: "", mensagem: "" });
-  const [erro, setErro] = useState("");
-  /*  const [sucesso, setSucesso] = useState(""); */
+// Interface para tipar o estado do formulário
+interface FormState {
+  nome: string;
+  email: string;
+  mensagem: string;
+}
 
-  const handleChange = (e) => {
+const Contato: React.FC = () => {
+  const [form, setForm] = useState<FormState>({
+    nome: "",
+    email: "",
+    mensagem: "",
+  });
+  const [erro, setErro] = useState<string>("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // 🔹 Validação básica
@@ -34,14 +46,14 @@ const Contato = () => {
     // 🔹 Enviar via EmailJS
     emailjs
       .send(
-        "service_3ds870n", // pegue no site do EmailJS
-        "template_roc7gzs", // id do template configurado
+        "service_3ds870n",
+        "template_roc7gzs",
         {
           from_name: form.nome,
           from_email: form.email,
           message: form.mensagem,
         },
-        "Kyw3BZxAKa2TFN-yA" // public key gerada no painel
+        "Kyw3BZxAKa2TFN-yA"
       )
       .then(
         (result) => {
@@ -68,7 +80,7 @@ const Contato = () => {
                 Preencha o formulário e compartilhe sua ideia comigo!
               </p>
             </div>
-
+            {erro && <p className="erro-mensagem">{erro}</p>}
             <form onSubmit={handleSubmit}>
               <input
                 type="text"

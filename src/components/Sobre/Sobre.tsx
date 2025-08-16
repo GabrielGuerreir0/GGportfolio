@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, type JSX } from "react";
 import "./Sobre.css";
 import emailIcon from "../../assets/imgs/email-icone.png";
 import userIcon from "../../assets/imgs/usuario-icone.png";
@@ -10,8 +10,21 @@ import docker from "../../assets/imgs/docker.png";
 import figma from "../../assets/imgs/figma.png";
 import angular from "../../assets/imgs/angular.png";
 
+// Interface para o item de dados que tem apenas a propriedade 'info'
+interface InfoContent {
+  info: JSX.Element;
+}
+
+// Interface para o item de dados que tem 'title', 'description' e 'info'
+interface QualificacoesContent {
+  info: JSX.Element;
+}
+
+// Usa uma união de tipos para representar a estrutura do array contentData
+type ContentItem = InfoContent | QualificacoesContent;
+
 // Dados para a descrição e o título
-const contentData = [
+const contentData: ContentItem[] = [
   {
     info: (
       <>
@@ -47,8 +60,6 @@ const contentData = [
     ),
   },
   {
-    title: "Qualificações",
-    description: "Algumas das minhas qualificações...",
     info: (
       <div className="qualificacoes">
         <h2 className="titulo-secao">Minha jornada</h2>
@@ -132,12 +143,12 @@ const contentData = [
   },
 ];
 
-const Sobre = () => {
-  // Use o estado para controlar qual item está ativo
-  const [activeItem, setActiveItem] = useState(0); // 0, 1 ou 2
+const Sobre: React.FC = () => {
+  // O estado agora é tipado para ser um número
+  const [activeItem, setActiveItem] = useState<number>(0);
 
   // A função para lidar com o clique
-  const handleItemClick = (index) => {
+  const handleItemClick = (index: number) => {
     setActiveItem(index);
   };
 

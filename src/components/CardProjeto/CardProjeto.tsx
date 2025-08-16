@@ -2,7 +2,14 @@ import React from "react";
 import "./CardProjeto.css";
 import check from "../../assets/imgs/check.png";
 
-const CardProjeto = ({ name, image, onCardClick }) => {
+// Define the interface for your props
+interface CardProjetoProps {
+  name: string;
+  image: string;
+  onCardClick?: (name: string) => void;
+}
+
+const CardProjeto = ({ name, image, onCardClick }: CardProjetoProps) => {
   const handleClick = () => {
     if (onCardClick) {
       onCardClick(name);
