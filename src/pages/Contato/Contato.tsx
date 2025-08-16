@@ -56,7 +56,7 @@ const Contato: React.FC = () => {
         "Kyw3BZxAKa2TFN-yA"
       )
       .then(
-        (result) => {
+        () => {
           alert("Mensagem enviada com sucesso!");
           setForm({ nome: "", email: "", mensagem: "" });
         },
