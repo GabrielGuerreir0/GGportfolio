@@ -17,8 +17,21 @@ import setaBaixo from "../../assets/imgs/seta-baixo.png";
 import webIcon from "../../assets/imgs/web-icon.png";
 import mobileIcon from "../../assets/imgs/mobile-icon.png";
 import uiIcon from "../../assets/imgs/ui-icon.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const irParaContato = () => {
+    navigate("/contato");
+  };
+
+  const baixarCurriculo = () => {
+    const link = document.createElement("a");
+    link.href = "/CV_GabrielGuerreiro.pdf";
+    link.download = "CV_GabrielGuerreiro.pdf";
+    link.click();
+  };
   return (
     <>
       <Navbar />
@@ -67,11 +80,13 @@ const Home = () => {
                 initial={{ opacity: 0, y: 10, scale: 0.2 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.8 }}
+                onClick={irParaContato}
               >
                 Entre em contato{" "}
                 <img src={contactIcon} alt="icone de contato" />
               </motion.button>
               <motion.button
+                onClick={baixarCurriculo}
                 className="botao"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
@@ -151,7 +166,7 @@ const Home = () => {
           <h2>
             Toda grande ideia merece ganhar vida. Vamos realizá-la juntos.
           </h2>
-          <button>Entre em contato</button>
+          <button onClick={irParaContato}>Entre em contato</button>
         </div>
         <div className="home-content-footer">
           <Footer />
