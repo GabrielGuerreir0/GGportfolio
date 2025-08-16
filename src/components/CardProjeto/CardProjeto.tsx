@@ -1,4 +1,3 @@
-import React from "react";
 import "./CardProjeto.css";
 import check from "../../assets/imgs/check.png";
 

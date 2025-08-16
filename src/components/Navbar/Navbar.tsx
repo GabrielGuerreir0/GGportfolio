@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/imgs/logo.png";
 import hamburguericon from "../../assets/imgs/hamburguer.png";
