@@ -1,11 +1,13 @@
 .projetos-container {
   padding: 0 13rem;
 }
+
 .projetos-container h1 {
   font-size: 1.625rem;
   padding-left: 3rem;
   position: relative;
 }
+
 .projetos-container h1::before {
   content: "";
   position: absolute;
@@ -22,9 +24,11 @@
 .projetos-content {
   display: flex;
 }
+
 .projetos-paresentation-content {
   display: flex;
 }
+
 .projetos-apresentation {
   display: flex;
   flex-direction: row;
@@ -38,20 +42,24 @@
   align-items: center;
   gap: 1rem;
 }
+
 .titulo-projeto img {
   width: 2rem;
   height: 2rem;
 }
+
 .titulo-descricao {
   display: flex;
   font-size: 1.25rem;
   align-items: center;
   gap: 1rem;
 }
+
 .titulo-descricao img {
   width: 2rem;
   height: 2rem;
 }
+
 p {
   margin: 0;
 }
@@ -62,20 +70,89 @@ p {
   align-items: center;
   gap: 1rem;
 }
+
 .data-projeto img {
   width: 2rem;
   height: 2rem;
 }
+
 p {
   font-size: 1rem;
 }
+
 .projetos-img {
   padding: 1rem;
   border: solid 2px var(--cor-azul-claro);
   border-radius: 0.5rem;
   margin-bottom: 10rem;
 }
+
 .projetos-img img {
   min-width: 44rem;
   height: auto;
+}
+
+/*
+ * --------------------------------------------------------------------------------------
+ * MEDIA QUERIES PARA ADAPTAÇÃO A TELAS MENORES (telemóveis e tablets)
+ * --------------------------------------------------------------------------------------
+ */
+@media (max-width: 1200px) {
+  .projetos-container {
+    padding: 2rem 2rem; /* Reduz o padding para tablets maiores */
+  }
+}
+
+@media (max-width: 1024px) {
+  .projetos-apresentation {
+    flex-direction: column-reverse; /* Organiza em coluna invertida */
+    gap: 2rem;
+  }
+
+  .projetos-img img {
+    min-width: unset; /* Remove a largura mínima fixa */
+    width: 100%; /* Torna a imagem flexível */
+  }
+
+  .projetos-container h1 {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .projetos-container h1::before {
+    display: none; /* Oculta o detalhe em telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .projetos-container {
+    padding: 2rem 1rem; /* Reduz o padding para telemóveis */
+  }
+
+  .projetos-apresentation {
+    text-align: center;
+  }
+
+  .projetos-paresentation-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .titulo-projeto,
+  .titulo-descricao,
+  .data-projeto {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .projetos-img {
+    margin-bottom: 5rem;
+    padding: 0.5rem;
+  }
 }

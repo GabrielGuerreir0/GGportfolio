@@ -5,27 +5,32 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.8rem 13.5rem 1.8rem 17.1rem;
+  padding: 1.8rem 2rem; /* Ajustado para um padding mais flexível */
 }
+
 .logo img {
   width: 33px;
   height: 34px;
 }
+
 .menu-icon {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
+
 .menu-icon img {
   width: 30px;
   height: 30px;
 }
+
 /* Menu lateral */
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 30.6rem;
+  width: 100%; /* Ocupa a largura total em telas pequenas */
+  max-width: 30.6rem; /* Limite a largura em telas maiores */
   height: 100vh;
   background-color: var(--cor-azul-escuro1);
   padding: 2rem 1.5rem;
@@ -45,16 +50,19 @@ nav {
   width: 47px;
   height: 50px;
 }
+
 .sidebar-close {
   display: flex;
   justify-content: flex-end;
 }
+
 .sidebar-header {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10rem;
 }
+
 .sidebar .close-btn {
   align-self: flex-end;
   font-size: 24px;
@@ -81,6 +89,7 @@ nav {
   font-size: 18px;
   transition: color 0.2s;
 }
+
 .sidebar-social {
   display: flex;
   justify-content: center;
@@ -91,14 +100,15 @@ nav {
 .sidebar ul li a:hover {
   color: var(--cor-azul-claro);
 }
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6); /* preto translúcido */
-  z-index: 900; /* abaixo da sidebar que tem z-index: 1000 */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 900;
 }
 
 @keyframes fadeIn {
@@ -107,5 +117,26 @@ nav {
   }
   to {
     opacity: 1;
+  }
+}
+
+/*
+ * --------------------------------------------------------------------------------------
+ * MEDIA QUERIES PARA RESPONSIVIDADE EM TELAS MENORES (ex: telemóveis)
+ * --------------------------------------------------------------------------------------
+ */
+@media (max-width: 768px) {
+  nav {
+    padding: 1.8rem 1rem; /* Reduz o padding em telas menores */
+  }
+  .sidebar {
+    width: 80%; /* Ocupa 80% da tela em dispositivos móveis */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adicionalmente, ajusta a barra de navegação para telas muito pequenas */
+  nav {
+    padding: 1rem;
   }
 }

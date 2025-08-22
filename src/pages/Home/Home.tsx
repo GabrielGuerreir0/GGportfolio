@@ -134,7 +134,7 @@ const Home = () => {
           </div>
         </div>
         <div className="home-content-cards">
-          <h2 className="title-cards">Serviços</h2>
+          <h2 className="title-cards-servico">Serviços</h2>
           <div className="content-cards">
             <Card
               url={webIcon}

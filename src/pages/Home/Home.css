@@ -1,11 +1,17 @@
+main {
+  width: 100%;
+  height: 100vh;
+}
+
 .home-main {
   background-color: var(--cor-azul-escuro1);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 9.3rem;
-  padding-bottom: 9.3rem;
+  padding: 0rem 2rem 9.3rem 2rem; /* Adicionado padding horizontal para telas maiores */
+  min-height: 100vh;
 }
+
 .home-contentsocial ul {
   display: flex;
   flex-direction: column;
@@ -21,9 +27,9 @@
   width: 32px;
   height: 32px;
 }
+
 .home-contentsocial {
   position: relative;
-  padding-bottom: 1 0.5rem;
   padding-right: 1.2rem;
 }
 
@@ -46,7 +52,9 @@
   display: flex;
   gap: 20px;
 }
+
 .botao {
+  cursor: pointer;
   background-color: var(--cor-azul-claro);
   color: var(--cor-txto);
   padding: 10px 20px;
@@ -58,12 +66,9 @@
   gap: 10px;
   align-items: center;
   font-weight: bold;
+  white-space: nowrap; /* Evita quebras de linha em botões */
 }
-.botão img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
+
 .home-content-text {
   padding-right: 15rem;
 }
@@ -71,9 +76,7 @@
   margin-bottom: 3.5rem;
   padding-right: 0.5rem;
 }
-.home-content-text .botoes-interacao {
-  padding-right: 2rem;
-}
+
 .home-content-avatar {
   background-image: url("../../assets/imgs/moldura1.png");
   background-size: contain;
@@ -86,6 +89,7 @@
   justify-content: center;
   animation: scale-in 0.8s ease-out forwards;
   position: relative;
+  min-width: 20rem; /* Garante tamanho mínimo */
 }
 
 .home-content-avatar::after {
@@ -102,6 +106,7 @@
   height: 8rem;
   z-index: 1;
 }
+
 .avatar-img {
   width: 65%;
   height: 65%;
@@ -120,27 +125,36 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 0 2rem; /* Adicionado padding horizontal */
 }
+
 .dwon-indicator-image {
   margin-top: 15rem;
   margin-bottom: 10rem;
 }
+
 .dwon-indicator-text {
   color: var(--cor-branco-puro);
   text-align: center;
-  width: 62.5rem;
-  font-size: 28px;
+  width: 100%; /* Torna a largura fluida */
+  max-width: 62.5rem; /* Adiciona um limite máximo */
+  font-size: 1.75rem; /* Ajustado para rem */
   margin-bottom: 40rem;
 }
+
 .texto {
   font-size: 1.75rem;
 }
+
 .home-content-sobre {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--cor-azul-claro2);
+  padding: 4rem 2rem; /* Adicionado padding para evitar quebra */
+  flex-wrap: wrap; /* Permite quebras de linha em telas menores */
 }
+
 .home-content-avatar-sobre {
   background-image: url("../../assets/imgs/moldura2.png");
   background-size: contain;
@@ -153,7 +167,9 @@
   justify-content: center;
   animation: scale-in 0.8s ease-out forwards;
   position: relative;
+  min-width: 25rem; /* Tamanho mínimo para a moldura */
 }
+
 .home-content-cards {
   background-image: linear-gradient(
     to bottom,
@@ -162,10 +178,20 @@
   );
   text-align: center;
   display: flex;
+  flex-direction: column; /* Organiza em coluna */
+  align-items: center;
   justify-content: center;
   padding-top: 15rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
 }
-.home-content-cards h2::after {
+
+.home-content-cards h2 {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.home-content-cards .title-cards-servico::after {
   content: "";
   background-image: url("../../assets/imgs/detalhe-card.png");
   background-size: contain;
@@ -174,6 +200,8 @@
   height: 2rem;
   position: absolute;
   left: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .content-cards {
@@ -182,16 +210,9 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  padding: 0 1rem;
+}
 
-  height: 100vh;
-}
-.title-cards {
-  position: absolute;
-}
-.title-cards::after {
-  content: "";
-  background-image: url("../../assets/imgs/detalhe-card.png");
-}
 .home-content-projetos {
   background-color: var(--cor-azul-escuro1);
   display: flex;
@@ -207,12 +228,17 @@
   align-items: center;
   justify-content: center;
   height: 26.6rem;
-}
-.home-content-contact h2 {
-  width: 34.3rem;
-  font-size: 2rem;
+  padding: 0 1rem;
   text-align: center;
 }
+
+.home-content-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Torna a largura fluida */
+  max-width: 34.3rem;
+}
+
 .home-content-contact button {
   background-color: var(--cor-azul-claro);
   color: var(--cor-txto);
@@ -225,6 +251,7 @@
   gap: 10px;
   align-items: center;
   font-weight: bold;
+  cursor: pointer;
 }
 
 @keyframes scale-in {
@@ -235,5 +262,118 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/*
+ * --------------------------------------------------------------------------------------
+ * MEDIA QUERIES PARA RESPONSIVIDADE EM TELAS MENORES (ex: telemóveis)
+ * --------------------------------------------------------------------------------------
+ */
+@media (max-width: 768px) {
+  .home-main {
+    flex-direction: column; /* Coloca os elementos em coluna */
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+
+  .home-contentsocial {
+    position: static; /* Remove o posicionamento absoluto */
+    padding-bottom: 2rem;
+    padding-right: 0;
+  }
+
+  .home-contentsocial::before {
+    display: none; /* Esconde a linha vertical */
+  }
+
+  .home-contentsocial ul {
+    flex-direction: row; /* Coloca os ícones sociais em linha */
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 0;
+  }
+
+  .home-content-text {
+    padding-right: 0;
+    margin-top: 2rem;
+  }
+
+  .home-content-text h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .botoes-interacao {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .botao {
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .home-content-avatar {
+    width: 18rem;
+    height: 18rem;
+    min-width: 15rem;
+    margin-top: 2rem;
+  }
+
+  .home-content-avatar::after {
+    width: 18rem;
+    background-size: 18rem;
+    bottom: -1.5rem;
+    height: 6rem;
+  }
+
+  .dwon-indicator-text {
+    font-size: 1.25rem;
+    width: 90%;
+    margin-bottom: 20rem; /* Ajustado para telas menores */
+  }
+
+  .dwon-indicator-image {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .home-content-sobre {
+    flex-direction: column;
+  }
+
+  .home-content-avatar-sobre {
+    width: 25rem;
+    height: 25rem;
+    min-width: 18rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-content-cards {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .title-cards {
+    position: static;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .home-content-cards h2::after {
+    display: none;
+  }
+
+  .home-content-contact {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .home-content-contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }

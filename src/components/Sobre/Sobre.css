@@ -6,6 +6,7 @@
   position: relative;
   padding-left: 2rem;
 }
+
 .title-sobre::before {
   content: "";
   display: block;
@@ -17,44 +18,40 @@
   left: -0.5rem;
   position: absolute;
 }
+
 .select {
   width: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
 }
+
 .navegacao {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   border-radius: 5px;
   background-color: var(--cor-azul-claro3);
-  width: 42rem;
-  height: 3.6rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 100%; /* Largura flexível */
+  max-width: 42rem; /* Limite máximo para telas maiores */
+  height: auto;
+  padding: 0.8rem 1rem; /* Padding flexível */
   margin-left: 0.5rem;
   justify-content: center;
 }
+
 .active {
   background-color: var(--cor-azul-escuro1);
   padding: 0.1rem 2.8rem;
   border-radius: 5px;
 }
+
 .navegacao ul {
   padding: 0;
   display: flex;
   flex-direction: row;
   gap: 2rem;
   margin: 0;
-}
-.navegacao ul li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.navegacao ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -62,36 +59,46 @@
   cursor: pointer;
 }
 
+.navegacao ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .descricao-text {
-  width: 56rem;
+  width: 100%; /* Largura flexível */
+  max-width: 56rem; /* Limite máximo para telas maiores */
   text-align: center;
   font-size: 22px;
 }
 .descricao-text h2 {
   font-size: 24px;
 }
-.informacao {
-}
+
 .informacao-text-line {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   gap: 1rem;
   justify-content: space-between;
 }
+
 .informacao-text {
   display: flex;
   align-items: center;
 }
+
 .minha-apresentacao {
   font-size: 1.37rem;
   color: #d5d5ff;
   margin-bottom: 3rem;
 }
+
 .informacao-text {
   margin-bottom: 3rem;
 }
+
 .informacao-text img {
   margin-right: 0.5rem;
 }
@@ -100,9 +107,11 @@
   padding-left: 6rem;
   font-size: 1.2rem;
 }
+
 .descricao-text-skill h3 {
   font-size: 1.5rem;
 }
+
 .informacao-skills ul {
   display: flex;
   flex-direction: column;
@@ -110,10 +119,12 @@
   list-style: inside;
   font-size: 1.2rem;
 }
+
 .lista-ferramentas-skills {
   padding-top: 2rem;
   padding-left: 6rem;
 }
+
 .lista-ferramentas-skills ul li img {
   width: 3rem;
   height: auto;
@@ -132,7 +143,7 @@
 
 .timeline {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Mantém o layout de 2 colunas em telas maiores */
   gap: 40px;
 }
 
@@ -165,4 +176,75 @@
 .periodo {
   font-size: 0.85rem;
   color: #94a3b8;
+}
+
+/*
+ * --------------------------------------------------------------------------------------
+ * MEDIA QUERIES PARA RESPONSIVIDADE (em telemóveis)
+ * --------------------------------------------------------------------------------------
+ */
+@media (max-width: 768px) {
+  .title-sobre {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .title-sobre::before {
+    display: none;
+  }
+
+  .home-content-avatar-sobre img {
+    width: 42%;
+    height: auto;
+  }
+  .navegacao {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .navegacao ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .active {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .descricao-text {
+    font-size: 18px;
+  }
+
+  .informacao-text {
+    justify-content: center;
+  }
+
+  .informacao-text-line {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .descricao-text-skill,
+  .informacao-skills ul,
+  .lista-ferramentas-skills {
+    padding-left: 0; /* Remove padding lateral em telas pequenas */
+    text-align: center;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr; /* Coloca os elementos em uma única coluna */
+    gap: 20px;
+  }
+
+  .qualificacoes {
+    padding: 15px;
+  }
 }
