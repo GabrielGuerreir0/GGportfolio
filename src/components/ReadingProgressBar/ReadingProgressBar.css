@@ -1,0 +1,9 @@
+.reading-progress-bar {
+  background-color: var(--cor-azul-claro);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  z-index: 9999;
+  transition: height 0.1s ease;
+}

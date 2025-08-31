@@ -30,3 +30,49 @@
 body {
   margin: 0;
 }
+/* Estilo geral da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem vertical */
+}
+
+/* Fundo da barra de rolagem (a trilha) */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  width: 0px;
+  height: auto;
+}
+
+/* O polegar (a alça que você arrasta) */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  width: 0px;
+  height: auto;
+}
+
+/* Cor do polegar ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+  width: 0px;
+  height: auto;
+}
+
+/* Exemplo de uso de cores para o seu código original */
+::-webkit-scrollbar {
+  width: 20px;
+  width: 0px;
+  height: auto; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor-azul-claro); /* Cor vermelha para o polegar */
+  border-radius: 60px;
+  width: 10px;
+  height: 300px;
+}
+
+::-webkit-scrollbar-track {
+  width: 0px;
+  height: auto;
+}
